@@ -1,0 +1,62 @@
+student@programming-lab-27:~$ ifconfig -a
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether da:c7:e1:33:23:86  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.1.73  netmask 255.255.0.0  broadcast 10.10.255.255
+        inet6 fe80::8a52:dd93:774f:3fca  prefixlen 64  scopeid 0x20<link>
+        ether f4:6b:8c:8c:ed:52  txqueuelen 1000  (Ethernet)
+        RX packets 16024  bytes 3456653 (3.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 662  bytes 104201 (104.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 28188  bytes 2193066 (2.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 28188  bytes 2193066 (2.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+student@programming-lab-27:~$ ifconfig -v
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether da:c7:e1:33:23:86  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.10.1.73  netmask 255.255.0.0  broadcast 10.10.255.255
+        inet6 fe80::8a52:dd93:774f:3fca  prefixlen 64  scopeid 0x20<link>
+        ether f4:6b:8c:8c:ed:52  txqueuelen 1000  (Ethernet)
+        RX packets 16061  bytes 3462377 (3.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 662  bytes 104201 (104.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 28188  bytes 2193066 (2.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 28188  bytes 2193066 (2.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+student@programming-lab-27:~$ ifconfig -s
+Iface      MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+docker0   1500        0      0      0 0             0      0      0      0 BMU
+enp2s0    1500    16071      0      0 0           662      0      0      0 BMRU
+lo       65536    28188      0      0 0         28188      0      0      0 LRU
+
