@@ -1,0 +1,105 @@
+student@programming-lab-27:~/Desktop$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether f4:6b:8c:8c:ed:52 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.1.73/16 brd 10.10.255.255 scope global dynamic noprefixroute enp2s0
+       valid_lft 25297sec preferred_lft 25297sec
+    inet6 fe80::8a52:dd93:774f:3fca/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether da:c7:e1:33:23:86 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+
+mtech@programming-lab-27:/home/student/Desktop$ sudo nmap -A 10.10.1.63
+Starting Nmap 7.80 ( https://nmap.org ) at 2026-07-08 14:51 IST
+Nmap scan report for 10.10.1.63
+Host is up (0.00011s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.15 (Ubuntu Linux; protocol 2.0)
+MAC Address: F4:6B:8C:8D:2D:50 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=7/8%OT=22%CT=1%CU=44774%PV=Y%DS=1%DC=D%G=Y%M=F46B8C%TM
+OS:=6A4E16C2%P=x86_64-pc-linux-gnu)SEQ(SP=F7%GCD=1%ISR=107%TI=Z%CI=Z%II=I%T
+OS:S=A)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=
+OS:M5B4ST11NW7%O6=M5B4ST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=F
+OS:E88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A
+OS:=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%
+OS:Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=
+OS:A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=
+OS:Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%
+OS:T=40%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.11 ms 10.10.1.63
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.27 seconds
+mtech@programming-lab-27:/home/student/Desktop$ sudo nmap -A 10.10.1.101
+Starting Nmap 7.80 ( https://nmap.org ) at 2026-07-08 14:52 IST
+Nmap scan report for 10.10.1.101
+Host is up (0.00028s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.15 (Ubuntu Linux; protocol 2.0)
+MAC Address: F4:6B:8C:8C:EE:1C (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=7/8%OT=22%CT=1%CU=33175%PV=Y%DS=1%DC=D%G=Y%M=F46B8C%TM
+OS:=6A4E16F8%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=10E%TI=Z%CI=Z%II=I%
+OS:TS=A)SEQ(SP=102%GCD=1%ISR=10E%TI=Z%CI=Z%TS=A)OPS(O1=M5B4ST11NW7%O2=M5B4S
+OS:T11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5B4ST11)WIN(W1=
+OS:FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=
+OS:M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)
+OS:T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S
+OS:+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=
+OS:Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G
+OS:%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.28 ms 10.10.1.101
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.84 seconds
+mtech@programming-lab-27:/home/student/Desktop$ sudo nmap -A 10.10.1.183
+Starting Nmap 7.80 ( https://nmap.org ) at 2026-07-08 14:53 IST
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.70 seconds
+mtech@programming-lab-27:/home/student/Desktop$ man nmap
+mtech@programming-lab-27:/home/student/Desktop$ sudo apt install tcpdump
+[sudo] password for mtech: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libffi7 libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib python2 python2-minimal python2.7 python2.7-minimal
+Use 'sudo apt autoremove' to remove them.
+The following packages will be upgraded:
+  tcpdump
+1 upgraded, 0 newly installed, 0 to remove and 139 not upgraded.
+Need to get 501 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 tcpdump amd64 4.99.1-3ubuntu0.2 [501 kB]
+Fetched 501 kB in 2s (270 kB/s)   
+(Reading database ... 294224 files and directories currently installed.)
+Preparing to unpack .../tcpdump_4.99.1-3ubuntu0.2_amd64.deb ...
+Unpacking tcpdump (4.99.1-3ubuntu0.2) over (4.99.1-3ubuntu0.1) ...
+Setting up tcpdump (4.99.1-3ubuntu0.2) ...
+Installing new version of config file /etc/apparmor.d/usr.bin.tcpdump ...
+Processing triggers for man-db (2.10.2-1) ...
+
