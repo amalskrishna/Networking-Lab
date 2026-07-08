@@ -1,0 +1,142 @@
+mtech@programming-lab-27:/home/student/Desktop$ sudo apt install tcpdump
+[sudo] password for mtech: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libffi7 libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib python2 python2-minimal python2.7 python2.7-minimal
+Use 'sudo apt autoremove' to remove them.
+The following packages will be upgraded:
+  tcpdump
+1 upgraded, 0 newly installed, 0 to remove and 139 not upgraded.
+Need to get 501 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 tcpdump amd64 4.99.1-3ubuntu0.2 [501 kB]
+Fetched 501 kB in 2s (270 kB/s)   
+(Reading database ... 294224 files and directories currently installed.)
+Preparing to unpack .../tcpdump_4.99.1-3ubuntu0.2_amd64.deb ...
+Unpacking tcpdump (4.99.1-3ubuntu0.2) over (4.99.1-3ubuntu0.1) ...
+Setting up tcpdump (4.99.1-3ubuntu0.2) ...
+Installing new version of config file /etc/apparmor.d/usr.bin.tcpdump ...
+Processing triggers for man-db (2.10.2-1) ...
+
+
+
+
+
+mtech@programming-lab-27:/home/student/Desktop$ sudo tcpdump -A tcp
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp2s0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+15:35:52.622600 IP lb-140-82-113-26-iad.github.com.https > programming-lab-27.34450: Flags [P.], seq 2119667585:2119667610, ack 2056900264, win 1540, options [nop,nop,TS val 1810641 ecr 4251008470], length 25
+E..MP.@.@..[.Rq.
+
+.I....~W..z..............
+.....a=......Uo.A...A..,T....~B.:
+15:35:52.622728 IP programming-lab-27.34450 > lb-140-82-113-26-iad.github.com.https: Flags [P.], seq 1:30, ack 25, win 594, options [nop,nop,TS val 4251068470 ecr 1810641], length 29
+E..Q.,@.@.,.
+
+.I.Rq.....z...~W.....R	......
+.b(6.........m..}K.p....+....r.V..3..
+15:35:52.622882 IP lb-140-82-113-26-iad.github.com.https > programming-lab-27.34450: Flags [.], ack 30, win 1540, options [nop,nop,TS val 1810641 ecr 4251068470], length 0
+E..4P.@.@..s.Rq.
+
+.I....~W..z..............
+.....b(6
+15:36:06.857891 IP programming-lab-27.58652 > connectivity-check-ubuntu-com-1.ps5.canonical.com.http: Flags [S], seq 4191127864, win 64240, options [mss 1460,sackOK,TS val 1199350282 ecr 0,nop,wscale 7], length 0
+E..<.c@.@..#
+
+.I.}.d...P...8.........c.........
+G|.
+........
+15:36:06.858327 IP connectivity-check-ubuntu-com-1.ps5.canonical.com.http > programming-lab-27.58652: Flags [S.], seq 2804464302, ack 4191127865, win 32768, options [mss 1400,sackOK,TS val 1814911 ecr 1199350282,nop,wscale 5], length 0
+E..<..@.@....}.d
+
+.I.P...(.....9...........x...
+....G|.
+....
+15:36:06.858359 IP programming-lab-27.58652 > connectivity-check-ubuntu-com-1.ps5.canonical.com.http: Flags [.], ack 1, win 502, options [nop,nop,TS val 1199350283 ecr 1814911], length 0
+E..4.d@.@..*
+
+.I.}.d...P...9.(.......[.....
+G|......
+15:36:06.858388 IP programming-lab-27.58652 > connectivity-check-ubuntu-com-1.ps5.canonical.com.http: Flags [P.], seq 1:88, ack 1, win 502, options [nop,nop,TS val 1199350283 ecr 1814911], length 87: HTTP: GET / HTTP/1.1
+E....e@.@...
+
+.I.}.d...P...9.(.............
+G|......GET / HTTP/1.1
+Host: connectivity-check.ubuntu.com
+Accept: */*
+Connection: close
+
+
+15:36:06.858541 IP connectivity-check-ubuntu-com-1.ps5.canonical.com.http > programming-lab-27.58652: Flags [.], ack 88, win 1024, options [nop,nop,TS val 1814912 ecr 1199350283], length 0
+E..4./@.@..`.}.d
+
+.I.P...(.................
+....G|..
+15:36:07.165506 IP connectivity-check-ubuntu-com-1.ps5.canonical.com.http > programming-lab-27.58652: Flags [P.], seq 1:115, ack 88, win 1024, options [nop,nop,TS val 1815004 ecr 1199350283], length 114: HTTP: HTTP/1.1 204 No Content
+E....0@.@....}.d
+
+.I.P...(.................
+....G|..HTTP/1.1 204 No Content
+server: nginx/1.18.0 (Ubuntu)
+date: Wed, 08 Jul 2026 10:06:07 GMT
+connection: close
+
+
+15:36:07.165545 IP programming-lab-27.58652 > connectivity-check-ubuntu-com-1.ps5.canonical.com.http: Flags [.], ack 115, win 502, options [nop,nop,TS val 1199350590 ecr 1815004], length 0
+E..4.f@.@..(
+
+.I.}.d...P.....(.!.....[.....
+G|.>....
+15:36:07.165553 IP connectivity-check-ubuntu-com-1.ps5.canonical.com.http > programming-lab-27.58652: Flags [F.], seq 115, ack 88, win 1024, options [nop,nop,TS val 1815004 ecr 1199350283], length 0
+E..4.1@.@..^.}.d
+
+.I.P...(.!...............
+....G|..
+15:36:07.165615 IP programming-lab-27.58652 > connectivity-check-ubuntu-com-1.ps5.canonical.com.http: Flags [F.], seq 88, ack 116, win 502, options [nop,nop,TS val 1199350590 ecr 1815004], length 0
+E..4.g@.@..'
+
+.I.}.d...P.....(.".....[.....
+G|.>....
+15:36:07.165818 IP connectivity-check-ubuntu-com-1.ps5.canonical.com.http > programming-lab-27.58652: Flags [.], ack 89, win 1024, options [nop,nop,TS val 1815004 ecr 1199350590], length 0
+E..4.2@.@..].}.d
+
+.I.P...(."...............
+....G|.>
+15:36:30.341809 IP programming-lab-27.54718 > 151.101.129.91.https: Flags [P.], seq 2073298596:2073298635, ack 2373914488, win 502, options [nop,nop,TS val 2549215262 ecr 1804554], length 39
+E..[..@.@.<.
+
+.I.e.[....{......x....$a.....
+.......
+...."....?...ML..5.W.._.l....ft/c	.-...
+15:36:30.341876 IP programming-lab-27.54726 > 151.101.129.91.https: Flags [P.], seq 2678281711:2678281750, ack 764445093, win 690, options [nop,nop,TS val 2549215262 ecr 1804554], length 39
+E..[.Q@.@.c8
+
+.I.e.[......U.-.......$a.....
+.......
+....":.PR.]8.jLn#..2.QxV.{.7Kw....1..].
+15:36:30.373132 IP 151.101.129.91.https > programming-lab-27.54726: Flags [P.], seq 1:40, ack 39, win 1540, options [nop,nop,TS val 1821966 ecr 2549215262], length 39
+E..[A.@.@....e.[
+
+.I....-.....V............
+............".dO......9...T.....D3..._L..2N.7|/
+15:36:30.373164 IP programming-lab-27.54726 > 151.101.129.91.https: Flags [.], ack 40, win 690, options [nop,nop,TS val 2549215294 ecr 1821966], length 0
+E..4.R@.@.c^
+
+.I.e.[......V.-.......$:.....
+...>....
+15:36:30.374027 IP 151.101.129.91.https > programming-lab-27.54718: Flags [P.], seq 1:40, ack 39, win 1540, options [nop,nop,TS val 1821966 ecr 2549215262], length 39
+E..[..@.@.[..e.[
+
+.I.......x{.......h......
+............".!......z..D*b>.....Z5.=..&J.A....
+15:36:30.374054 IP programming-lab-27.54718 > 151.101.129.91.https: Flags [.], ack 40, win 502, options [nop,nop,TS val 2549215294 ecr 1821966], length 0
+E..4..@.@.<.
+
+.I.e.[....{...........$:.....
+...>....
+^C
+19 packets captured
+19 packets received by filter
+0 packets dropped by kernel
