@@ -81,25 +81,3 @@ Starting Nmap 7.80 ( https://nmap.org ) at 2026-07-08 14:53 IST
 Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
 Nmap done: 1 IP address (0 hosts up) scanned in 0.70 seconds
 mtech@programming-lab-27:/home/student/Desktop$ man nmap
-mtech@programming-lab-27:/home/student/Desktop$ sudo apt install tcpdump
-[sudo] password for mtech: 
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  libffi7 libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib python2 python2-minimal python2.7 python2.7-minimal
-Use 'sudo apt autoremove' to remove them.
-The following packages will be upgraded:
-  tcpdump
-1 upgraded, 0 newly installed, 0 to remove and 139 not upgraded.
-Need to get 501 kB of archives.
-After this operation, 0 B of additional disk space will be used.
-Get:1 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 tcpdump amd64 4.99.1-3ubuntu0.2 [501 kB]
-Fetched 501 kB in 2s (270 kB/s)   
-(Reading database ... 294224 files and directories currently installed.)
-Preparing to unpack .../tcpdump_4.99.1-3ubuntu0.2_amd64.deb ...
-Unpacking tcpdump (4.99.1-3ubuntu0.2) over (4.99.1-3ubuntu0.1) ...
-Setting up tcpdump (4.99.1-3ubuntu0.2) ...
-Installing new version of config file /etc/apparmor.d/usr.bin.tcpdump ...
-Processing triggers for man-db (2.10.2-1) ...
-
