@@ -1,4 +1,3 @@
-package tcpclientserver;
 import java.io.*;
 import java.net.*;
 
