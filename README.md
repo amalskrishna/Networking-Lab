@@ -43,10 +43,10 @@ The [`Tutorial`](./Tutorial) folder explains how each program works. It has four
 
 | Subfolder | Topic |
 |-----------|-------|
-| [multi-user-chat-server](./Tutorial/multi-user-chat-server) | Multi-user chat server that handles many clients using threads |
-| [concurrent-file-server](./Tutorial/concurrent-file-server) | Concurrent file server that serves file requests from multiple clients |
-| [tcp-client-server](./Tutorial/tcp-client-server) | Basic TCP client-server communication |
-| [udp-client-server](./Tutorial/udp-client-server) | Basic UDP client-server communication |
+| [discord](./Tutorial/discord) | Multi-user chat server that handles many clients using threads |
+| [fileserver](./Tutorial/fileserver) | Concurrent file server that serves file requests from multiple clients |
+| [tcpclientserver](./Tutorial/tcpclientserver) | Basic TCP client-server communication |
+| [udpclientserver](./Tutorial/udpclientserver) | Basic UDP client-server communication |
 
 ---
 
